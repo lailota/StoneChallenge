@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0673269F729400878D3E /* AppDelegate.swift */; };
+		C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0675269F729400878D3E /* SceneDelegate.swift */; };
+		C9DD0678269F729400878D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0677269F729400878D3E /* ViewController.swift */; };
+		C9DD067B269F729400878D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DD0679269F729400878D3E /* Main.storyboard */; };
+		C9DD067D269F729A00878D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DD067C269F729A00878D3E /* Assets.xcassets */; };
+		C9DD0680269F729A00878D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */; };
+		C9DD0688269F743500878D3E /* FactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0687269F743500878D3E /* FactsManager.swift */; };
+		C9DD068A269F76ED00878D3E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0689269F76ED00878D3E /* Response.swift */; };
+		C9DD068C269F770500878D3E /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD068B269F770500878D3E /* Fact.swift */; };
+		C9DD06B526A0FF6000878D3E /* DisplayFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD06B326A0FF6000878D3E /* DisplayFactTableViewCell.swift */; };
+		C9DD06B626A0FF6000878D3E /* DisplayFactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DD06B426A0FF6000878D3E /* DisplayFactTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9DD0670269F729400878D3E /* StoneChallenge - Laila G Hussein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StoneChallenge - Laila G Hussein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9DD0673269F729400878D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9DD0675269F729400878D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C9DD0677269F729400878D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9DD067A269F729400878D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9DD067C269F729A00878D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9DD067F269F729A00878D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9DD0681269F729A00878D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9DD0687269F743500878D3E /* FactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsManager.swift; sourceTree = "<group>"; };
+		C9DD0689269F76ED00878D3E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C9DD068B269F770500878D3E /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		C9DD06B326A0FF6000878D3E /* DisplayFactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFactTableViewCell.swift; sourceTree = "<group>"; };
+		C9DD06B426A0FF6000878D3E /* DisplayFactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayFactTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9DD066D269F729400878D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9DD0667269F729400878D3E = {
+			isa = PBXGroup;
+			children = (
+				C9DD0672269F729400878D3E /* StoneChallenge - Laila G Hussein */,
+				C9DD0671269F729400878D3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9DD0671269F729400878D3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD0670269F729400878D3E /* StoneChallenge - Laila G Hussein.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9DD0672269F729400878D3E /* StoneChallenge - Laila G Hussein */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD0673269F729400878D3E /* AppDelegate.swift */,
+				C9DD0675269F729400878D3E /* SceneDelegate.swift */,
+				C9DD0677269F729400878D3E /* ViewController.swift */,
+				C9DD0679269F729400878D3E /* Main.storyboard */,
+				C9DD067C269F729A00878D3E /* Assets.xcassets */,
+				C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */,
+				C9DD0681269F729A00878D3E /* Info.plist */,
+				C9DD0687269F743500878D3E /* FactsManager.swift */,
+				C9DD0689269F76ED00878D3E /* Response.swift */,
+				C9DD068B269F770500878D3E /* Fact.swift */,
+				C9DD06B326A0FF6000878D3E /* DisplayFactTableViewCell.swift */,
+				C9DD06B426A0FF6000878D3E /* DisplayFactTableViewCell.xib */,
+			);
+			path = "StoneChallenge - Laila G Hussein";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9DD066F269F729400878D3E /* StoneChallenge - Laila G Hussein */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9DD0684269F729A00878D3E /* Build configuration list for PBXNativeTarget "StoneChallenge - Laila G Hussein" */;
+			buildPhases = (
+				C9DD066C269F729400878D3E /* Sources */,
+				C9DD066D269F729400878D3E /* Frameworks */,
+				C9DD066E269F729400878D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StoneChallenge - Laila G Hussein";
+			productName = "StoneChallenge - Laila G Hussein";
+			productReference = C9DD0670269F729400878D3E /* StoneChallenge - Laila G Hussein.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9DD0668269F729400878D3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C9DD066F269F729400878D3E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = C9DD066B269F729400878D3E /* Build configuration list for PBXProject "StoneChallenge - Laila G Hussein" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9DD0667269F729400878D3E;
+			productRefGroup = C9DD0671269F729400878D3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9DD066F269F729400878D3E /* StoneChallenge - Laila G Hussein */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9DD066E269F729400878D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DD06B626A0FF6000878D3E /* DisplayFactTableViewCell.xib in Resources */,
+				C9DD0680269F729A00878D3E /* LaunchScreen.storyboard in Resources */,
+				C9DD067D269F729A00878D3E /* Assets.xcassets in Resources */,
+				C9DD067B269F729400878D3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9DD066C269F729400878D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DD0678269F729400878D3E /* ViewController.swift in Sources */,
+				C9DD06B526A0FF6000878D3E /* DisplayFactTableViewCell.swift in Sources */,
+				C9DD068C269F770500878D3E /* Fact.swift in Sources */,
+				C9DD0688269F743500878D3E /* FactsManager.swift in Sources */,
+				C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */,
+				C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */,
+				C9DD068A269F76ED00878D3E /* Response.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9DD0679269F729400878D3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9DD067A269F729400878D3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9DD067F269F729A00878D3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9DD0682269F729A00878D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9DD0683269F729A00878D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9DD0685269F729A00878D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NU7PDN3PT3;
+				INFOPLIST_FILE = "StoneChallenge - Laila G Hussein/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lailagh.StoneChallenge---Laila-G-Hussein";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9DD0686269F729A00878D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NU7PDN3PT3;
+				INFOPLIST_FILE = "StoneChallenge - Laila G Hussein/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lailagh.StoneChallenge---Laila-G-Hussein";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9DD066B269F729400878D3E /* Build configuration list for PBXProject "StoneChallenge - Laila G Hussein" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9DD0682269F729A00878D3E /* Debug */,
+				C9DD0683269F729A00878D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9DD0684269F729A00878D3E /* Build configuration list for PBXNativeTarget "StoneChallenge - Laila G Hussein" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9DD0685269F729A00878D3E /* Debug */,
+				C9DD0686269F729A00878D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9DD0668269F729400878D3E /* Project object */;
+}
