@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Create the Response Structure
+
 struct Response: Codable {
     
     var total: Int
@@ -18,3 +20,4 @@ struct Response: Codable {
     }
     
 }
+

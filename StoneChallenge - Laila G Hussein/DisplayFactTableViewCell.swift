@@ -27,6 +27,7 @@ class DisplayFactTableViewCell: UITableViewCell {
   
     }
     
+    // Function to setup the cell in TableView
     
     func setup(value: Fact) {
         
@@ -51,3 +52,4 @@ class DisplayFactTableViewCell: UITableViewCell {
         
     }
 }
+

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FactViewControViewController.swift
 //  StoneChallenge - Laila G Hussein
 //
 //  Created by Laila Guzzon Hussein Lailota on 14/07/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FactViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mySearchBar: UISearchBar!
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UISearchBarDelegate {
+extension FactViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -66,7 +66,7 @@ extension ViewController: UISearchBarDelegate {
 }
 
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension FactViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
