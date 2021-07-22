@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9BC33F026A9F77D00AEDD2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */; };
 		C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0673269F729400878D3E /* AppDelegate.swift */; };
 		C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0675269F729400878D3E /* SceneDelegate.swift */; };
 		C9DD0678269F729400878D3E /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0677269F729400878D3E /* FactViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C9DD0670269F729400878D3E /* StoneChallenge - Laila G Hussein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StoneChallenge - Laila G Hussein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DD0673269F729400878D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9DD0675269F729400878D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				C9DD0673269F729400878D3E /* AppDelegate.swift */,
 				C9DD0675269F729400878D3E /* SceneDelegate.swift */,
 				C9DD0677269F729400878D3E /* FactViewController.swift */,
+				C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */,
 				C9DD0679269F729400878D3E /* Main.storyboard */,
 				C9DD067C269F729A00878D3E /* Assets.xcassets */,
 				C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */,
 				C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */,
 				C9DD068A269F76ED00878D3E /* Response.swift in Sources */,
+				C9BC33F026A9F77D00AEDD2A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

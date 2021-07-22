@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NrJ-es-Nh3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fact View Controller-->
+        <!--CHUCK NORRIS FACTS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FactViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,10 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-eT-aOE">
-                                <rect key="frame" x="0.0" y="53" width="414" height="51"/>
-                                <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-eT-aOE">
+                                <rect key="frame" x="0.0" y="97" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -27,7 +25,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-e4-XCz">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -43,17 +41,94 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qor-e4-XCz" secondAttribute="trailing" id="xkT-7Q-4Eu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="CHUCK NORRIS FACTS" id="wl6-It-KjW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="RPH-Qz-1S4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="CK4-BL-f1R">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="BYZ-38-t0r" id="oLm-s6-VXQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mySearchBar" destination="NsM-eT-aOE" id="gF7-ME-kzp"/>
                         <outlet property="tableView" destination="Qor-e4-XCz" id="sc0-gl-39h"/>
+                        <segue destination="OK0-Ox-Hhx" kind="show" identifier="DetailViewController" id="z8a-MQ-lWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-493" y="59"/>
+            <point key="canvasLocation" x="415.94202898550731" y="58.928571428571423"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="c8o-bG-zBm">
+            <objects>
+                <viewController id="OK0-Ox-Hhx" customClass="DetailViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbH-Pd-ipM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-ld-Bb4">
+                                <rect key="frame" x="20" y="118" width="374" height="714"/>
+                                <color key="backgroundColor" red="0.92149782179999995" green="0.92160838840000003" blue="0.92146027090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vZP-2y-RQ9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vZP-2y-RQ9" firstAttribute="bottom" secondItem="lzr-ld-Bb4" secondAttribute="bottom" constant="30" id="IoR-a7-edP"/>
+                            <constraint firstItem="lzr-ld-Bb4" firstAttribute="top" secondItem="vZP-2y-RQ9" secondAttribute="top" constant="30" id="Z3n-gs-SFJ"/>
+                            <constraint firstItem="vZP-2y-RQ9" firstAttribute="trailing" secondItem="lzr-ld-Bb4" secondAttribute="trailing" constant="20" id="eCR-BY-9jb"/>
+                            <constraint firstItem="lzr-ld-Bb4" firstAttribute="leading" secondItem="vZP-2y-RQ9" secondAttribute="leading" constant="20" id="hot-PL-ROm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="axh-Sj-VHt">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up.fill" catalog="system" id="Zhz-OB-pfw">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="OK0-Ox-Hhx" id="k1Z-3Z-Fjp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="factTextView" destination="lzr-ld-Bb4" id="BYE-Jr-w3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXY-AH-GVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273.913043478261" y="58.928571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9S5-bf-gLb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NrJ-es-Nh3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="TZ8-Ks-hee">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0tJ-Jf-rWY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lS-dt-xkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-494.20289855072468" y="58.928571428571423"/>
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

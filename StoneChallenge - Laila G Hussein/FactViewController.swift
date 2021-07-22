@@ -26,7 +26,13 @@ class FactViewController: UIViewController {
         self.tableView.register(UINib(nibName: "DisplayFactTableViewCell", bundle: nil), forCellReuseIdentifier: "DisplayFactTableViewCell")
         
         self.tableView.tableFooterView = UIView()
+        self.mySearchBar.isHidden = true
     }
+    
+    @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
+        mySearchBar.isHidden = false
+    }
+    
 }
 
 
@@ -64,21 +70,35 @@ extension FactViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell: DisplayFactTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "DisplayFactTableViewCell", for: indexPath) as? DisplayFactTableViewCell
         
-        cell?.setup(value: self.model.factsArray[indexPath.row])
-        
-        cell?.buttonAction = { sender in
-            let activityController = UIActivityViewController(activityItems: [self.model.factsArray[indexPath.row].url], applicationActivities: nil)
-            self.present(activityController, animated: true, completion: nil)
+        if model.factsArray.isEmpty {
+            return UITableViewCell()
+        } else {
+            cell?.setup(value: self.model.factsArray[indexPath.row])
+            
+            cell?.buttonAction = { sender in
+                let activityController = UIActivityViewController(activityItems: [self.model.factsArray[indexPath.row].url], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+            return cell ?? UITableViewCell()
         }
-        return cell ?? UITableViewCell()
+ 
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return model.totalAct
+            return model.totalAct
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? DetailViewController {
+            destinationVC.FactDescription = model.factsArray[(tableView.indexPathForSelectedRow?.row)!].value
+            destinationVC.urlString = model.factsArray[(tableView.indexPathForSelectedRow?.row)!].url
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+        }
+    }
 }
-

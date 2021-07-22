@@ -16,10 +16,6 @@ class DisplayFactTableViewCell: UITableViewCell {
     
     var buttonAction: ((Any) -> Void)?
     
-    var model: FactsManager = {
-        return FactsManager.factsManager
-    }()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -61,7 +57,6 @@ class DisplayFactTableViewCell: UITableViewCell {
         self.buttonAction?(sender)
     }
     
-    
-    
 }
+
 

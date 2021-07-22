@@ -50,12 +50,13 @@ class FactsManager {
                     
                 }
                 catch {
-                    completion(.failure(error))
+                    //print(completion(.failure(error)))
                     print("Estou vazio")
                 }
                 
             } else if let error = error {
-                completion(.failure(error))
+                //completion(.failure(error))
+                print(error)
             }
 
         }
