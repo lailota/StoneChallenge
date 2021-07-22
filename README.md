@@ -1,8 +1,9 @@
 # StoneChallenge 🟢
 
+## 🚧 Em construção
 ## Teste do processo seletivo para a empresa Stone pagamentos.
 
-## Desafio 🚧
+## Desafio 🎯
 Este desafio conta com a construção de um app que consome dados da API dos fatos do Chuck Norris
 
 ## O que faz? ⁉️
