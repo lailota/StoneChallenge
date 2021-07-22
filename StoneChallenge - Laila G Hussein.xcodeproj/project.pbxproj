@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C9BC33F026A9F77D00AEDD2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */; };
+		C9BC33F226A9FD9400AEDD2A /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC33F126A9FD9400AEDD2A /* View+Extension.swift */; };
+		C9BC33F426AA065200AEDD2A /* Gif+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC33F326AA065200AEDD2A /* Gif+Extension.swift */; };
+		C9BC33F626AA072400AEDD2A /* chuck.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9BC33F526AA072400AEDD2A /* chuck.gif */; };
 		C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0673269F729400878D3E /* AppDelegate.swift */; };
 		C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0675269F729400878D3E /* SceneDelegate.swift */; };
 		C9DD0678269F729400878D3E /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD0677269F729400878D3E /* FactViewController.swift */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C9BC33F126A9FD9400AEDD2A /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		C9BC33F326AA065200AEDD2A /* Gif+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gif+Extension.swift"; sourceTree = "<group>"; };
+		C9BC33F526AA072400AEDD2A /* chuck.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = chuck.gif; sourceTree = "<group>"; };
 		C9DD0670269F729400878D3E /* StoneChallenge - Laila G Hussein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StoneChallenge - Laila G Hussein.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DD0673269F729400878D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9DD0675269F729400878D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9BC33F726AA151E00AEDD2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD0677269F729400878D3E /* FactViewController.swift */,
+				C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */,
+				C9DD06B326A0FF6000878D3E /* DisplayFactTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C9BC33F826AA153300AEDD2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD0687269F743500878D3E /* FactsManager.swift */,
+				C9DD0689269F76ED00878D3E /* Response.swift */,
+				C9DD068B269F770500878D3E /* Fact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9BC33F926AA154300AEDD2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD0679269F729400878D3E /* Main.storyboard */,
+				C9DD06B426A0FF6000878D3E /* DisplayFactTableViewCell.xib */,
+				C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9BC33FA26AA156F00AEDD2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC33F126A9FD9400AEDD2A /* View+Extension.swift */,
+				C9BC33F326AA065200AEDD2A /* Gif+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C9DD0667269F729400878D3E = {
 			isa = PBXGroup;
 			children = (
@@ -70,17 +115,13 @@
 			children = (
 				C9DD0673269F729400878D3E /* AppDelegate.swift */,
 				C9DD0675269F729400878D3E /* SceneDelegate.swift */,
-				C9DD0677269F729400878D3E /* FactViewController.swift */,
-				C9BC33EF26A9F77D00AEDD2A /* DetailViewController.swift */,
-				C9DD0679269F729400878D3E /* Main.storyboard */,
+				C9BC33FA26AA156F00AEDD2A /* Extensions */,
+				C9BC33F826AA153300AEDD2A /* Model */,
+				C9BC33F926AA154300AEDD2A /* View */,
+				C9BC33F726AA151E00AEDD2A /* Controller */,
 				C9DD067C269F729A00878D3E /* Assets.xcassets */,
-				C9DD067E269F729A00878D3E /* LaunchScreen.storyboard */,
 				C9DD0681269F729A00878D3E /* Info.plist */,
-				C9DD0687269F743500878D3E /* FactsManager.swift */,
-				C9DD0689269F76ED00878D3E /* Response.swift */,
-				C9DD068B269F770500878D3E /* Fact.swift */,
-				C9DD06B326A0FF6000878D3E /* DisplayFactTableViewCell.swift */,
-				C9DD06B426A0FF6000878D3E /* DisplayFactTableViewCell.xib */,
+				C9BC33F526AA072400AEDD2A /* chuck.gif */,
 			);
 			path = "StoneChallenge - Laila G Hussein";
 			sourceTree = "<group>";
@@ -142,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BC33F626AA072400AEDD2A /* chuck.gif in Resources */,
 				C9DD06B626A0FF6000878D3E /* DisplayFactTableViewCell.xib in Resources */,
 				C9DD0680269F729A00878D3E /* LaunchScreen.storyboard in Resources */,
 				C9DD067D269F729A00878D3E /* Assets.xcassets in Resources */,
@@ -156,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BC33F426AA065200AEDD2A /* Gif+Extension.swift in Sources */,
 				C9DD0678269F729400878D3E /* FactViewController.swift in Sources */,
 				C9DD06B526A0FF6000878D3E /* DisplayFactTableViewCell.swift in Sources */,
 				C9DD068C269F770500878D3E /* Fact.swift in Sources */,
@@ -163,6 +206,7 @@
 				C9DD0674269F729400878D3E /* AppDelegate.swift in Sources */,
 				C9DD0676269F729400878D3E /* SceneDelegate.swift in Sources */,
 				C9DD068A269F76ED00878D3E /* Response.swift in Sources */,
+				C9BC33F226A9FD9400AEDD2A /* View+Extension.swift in Sources */,
 				C9BC33F026A9F77D00AEDD2A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,8 +19,7 @@ class DisplayFactTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.frameView.layer.borderWidth = 2.5
-        self.frameView.layer.borderColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
+        self.frameView.frameView()
 
     }
     

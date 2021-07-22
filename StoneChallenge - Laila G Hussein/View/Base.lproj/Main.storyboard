@@ -78,14 +78,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mrw-Zi-MZd">
+                                <rect key="frame" x="66.5" y="569" width="281" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="99q-za-gXv"/>
+                                    <constraint firstAttribute="width" constant="281" id="DiP-b4-fwL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vZP-2y-RQ9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vZP-2y-RQ9" firstAttribute="bottom" secondItem="lzr-ld-Bb4" secondAttribute="bottom" constant="30" id="IoR-a7-edP"/>
                             <constraint firstItem="lzr-ld-Bb4" firstAttribute="top" secondItem="vZP-2y-RQ9" secondAttribute="top" constant="30" id="Z3n-gs-SFJ"/>
+                            <constraint firstItem="mrw-Zi-MZd" firstAttribute="centerX" secondItem="fbH-Pd-ipM" secondAttribute="centerX" id="das-TT-XUW"/>
                             <constraint firstItem="vZP-2y-RQ9" firstAttribute="trailing" secondItem="lzr-ld-Bb4" secondAttribute="trailing" constant="20" id="eCR-BY-9jb"/>
                             <constraint firstItem="lzr-ld-Bb4" firstAttribute="leading" secondItem="vZP-2y-RQ9" secondAttribute="leading" constant="20" id="hot-PL-ROm"/>
+                            <constraint firstItem="vZP-2y-RQ9" firstAttribute="bottom" secondItem="mrw-Zi-MZd" secondAttribute="bottom" constant="115" id="uau-qI-Mxk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="axh-Sj-VHt">
@@ -98,6 +107,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="factTextView" destination="lzr-ld-Bb4" id="BYE-Jr-w3t"/>
+                        <outlet property="gifImage" destination="mrw-Zi-MZd" id="R1n-n5-nau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXY-AH-GVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

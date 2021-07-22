@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class FactsManager {
     
     public static let factsManager = FactsManager()

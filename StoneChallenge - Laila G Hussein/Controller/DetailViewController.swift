@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var factTextView: UITextView!
+    @IBOutlet weak var gifImage: UIImageView!
     
     var urlString: String?
     var FactDescription: String?
@@ -18,8 +19,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.factTextView.text = FactDescription
-        self.factTextView.layer.borderWidth = 2.5
-        self.factTextView.layer.borderColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
+        self.factTextView.frameView()
+        
+        gifImage.loadGif(name: "chuck")
     }
     
 
