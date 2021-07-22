@@ -14,6 +14,12 @@ class DisplayFactTableViewCell: UITableViewCell {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var frameView: UIView!
     
+    var buttonAction: ((Any) -> Void)?
+    
+    var model: FactsManager = {
+        return FactsManager.factsManager
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,7 +34,6 @@ class DisplayFactTableViewCell: UITableViewCell {
     }
     
     // Function to setup the cell in TableView
-    
     func setup(value: Fact) {
         
         if value.value.count <= 80 {
@@ -49,7 +54,14 @@ class DisplayFactTableViewCell: UITableViewCell {
             categoryLabel.sizeToFit()
             
         }
-        
     }
+    
+    
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        self.buttonAction?(sender)
+    }
+    
+    
+    
 }
 

@@ -32,28 +32,22 @@ class FactsManager {
         let task = session.dataTask(with: url) { (data, response, error) in
             
             let decoder = JSONDecoder()
+            
             // Check if there were any errors
             if let data = data {
                 do {
-                    // Parsing the data into video objects
                     
+                    // Parsing the data
                     let result = try decoder.decode(Response.self, from: data)
-                    //print(result.total)
                     
                     for factData in result.result {
 
                         let storedFact: Fact = Fact(categories: factData.categories, created_at: factData.created_at, icon_url: factData.icon_url, id: factData.id, updated_at: factData.updated_at, url: factData.url, value: factData.value)
 
                         self.factsArray.append(storedFact)
-                        
-                        
-                        
-                        print(self.factsArray.count)
-                        //print(self.factsArray[0].value)
-                    }
-                    DispatchQueue.main.async {
                         self.totalAct = self.factsArray.count
                     }
+                    
                 }
                 catch {
                     completion(.failure(error))

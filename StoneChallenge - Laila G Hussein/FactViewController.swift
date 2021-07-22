@@ -16,9 +16,6 @@ class FactViewController: UIViewController {
         return FactsManager.factsManager
     }()
     
-    var data: Response?
-    var numberOfCV = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +26,6 @@ class FactViewController: UIViewController {
         self.tableView.register(UINib(nibName: "DisplayFactTableViewCell", bundle: nil), forCellReuseIdentifier: "DisplayFactTableViewCell")
         
         self.tableView.tableFooterView = UIView()
-        
     }
 }
 
@@ -43,25 +39,21 @@ extension FactViewController: UISearchBarDelegate {
             model.factsArray.removeAll()
             model.getFacts(realFact) { (result) in
                 
-                    self.tableView.reloadData()
-                    switch result {
-                    case.success(let response):
-                        print(response.total,"LAILA")
-                        
-                        
-                        
-                    case.failure(let error):
-                        print(error)
-                    }
+                self.tableView.reloadData()
+                switch result {
+                case.success(_):
+                    break
+                    
+                case.failure(let error):
+                    print(error)
                 }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
                 self.tableView.reloadData()
             }
         }
         searchBar.resignFirstResponder()
     }
-    
-    
     
 }
 
@@ -72,8 +64,12 @@ extension FactViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell: DisplayFactTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "DisplayFactTableViewCell", for: indexPath) as? DisplayFactTableViewCell
         
-        cell?.setup(value: model.factsArray[indexPath.row])
+        cell?.setup(value: self.model.factsArray[indexPath.row])
         
+        cell?.buttonAction = { sender in
+            let activityController = UIActivityViewController(activityItems: [self.model.factsArray[indexPath.row].url], applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+        }
         return cell ?? UITableViewCell()
     }
     
@@ -82,6 +78,7 @@ extension FactViewController: UITableViewDelegate, UITableViewDataSource {
         
         return model.totalAct
     }
+    
     
 }
 
