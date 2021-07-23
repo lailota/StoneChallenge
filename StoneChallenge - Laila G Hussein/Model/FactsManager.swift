@@ -46,7 +46,6 @@ class FactsManager {
                         self.factsArray.append(storedFact)
                         self.totalAct = self.factsArray.count
                     }
-                    
                 }
                 catch {
                     //print(completion(.failure(error)))
@@ -57,7 +56,6 @@ class FactsManager {
                 //completion(.failure(error))
                 print(error)
             }
-
         }
         // Kick off the task
         task.resume()

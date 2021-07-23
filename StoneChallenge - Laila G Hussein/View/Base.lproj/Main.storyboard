@@ -16,7 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-eT-aOE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqW-Qr-QCf">
+                                <rect key="frame" x="166" y="437.5" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type something ..." translatesAutoresizingMaskIntoConstraints="NO" id="NsM-eT-aOE">
                                 <rect key="frame" x="0.0" y="97" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
@@ -26,15 +32,17 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-e4-XCz">
                                 <rect key="frame" x="0.0" y="148" width="414" height="714"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NsM-eT-aOE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="0C3-Yq-rE6"/>
+                            <constraint firstItem="vqW-Qr-QCf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0f7-aE-ZpP"/>
                             <constraint firstItem="Qor-e4-XCz" firstAttribute="top" secondItem="NsM-eT-aOE" secondAttribute="bottom" id="7hT-m6-JOU"/>
                             <constraint firstItem="NsM-eT-aOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8X-YB-nmY"/>
+                            <constraint firstItem="vqW-Qr-QCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NzL-JT-RVr"/>
                             <constraint firstItem="Qor-e4-XCz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bv9-fh-zoj"/>
                             <constraint firstItem="NsM-eT-aOE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lcJ-3l-SSl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qor-e4-XCz" secondAttribute="bottom" id="pUg-Iq-oKu"/>
@@ -54,6 +62,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mySearchBar" destination="NsM-eT-aOE" id="gF7-ME-kzp"/>
+                        <outlet property="noResultsLabel" destination="vqW-Qr-QCf" id="OSf-84-6uc"/>
                         <outlet property="tableView" destination="Qor-e4-XCz" id="sc0-gl-39h"/>
                         <segue destination="OK0-Ox-Hhx" kind="show" identifier="DetailViewController" id="z8a-MQ-lWE"/>
                     </connections>

@@ -11,6 +11,7 @@ class FactViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mySearchBar: UISearchBar!
+    @IBOutlet weak var noResultsLabel: UILabel!
     
     var model: FactsManager = {
         return FactsManager.factsManager
@@ -18,6 +19,8 @@ class FactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noResultsLabel.textColor = .white
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -30,7 +33,12 @@ class FactViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
-        mySearchBar.isHidden = false
+        if mySearchBar.isHidden {
+            mySearchBar.isHidden = false
+        } else {
+            mySearchBar.isHidden = true
+        }
+            
     }
     
 }
@@ -40,12 +48,25 @@ extension FactViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+        model.factsArray.removeAll()
+        
+        if searchBar.isSearchResultsButtonSelected {
+           // self.tableView.backgroundView = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.noResultsLabel.textColor = .black
+            }
+            
+        }
+        
         if let realFact = mySearchBar.text {
             
-            model.factsArray.removeAll()
+            if model.factsArray.isEmpty {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    self.noResultsLabel.textColor = .black
+                }
+            }
+            
             model.getFacts(realFact) { (result) in
-                
-                self.tableView.reloadData()
                 switch result {
                 case.success(_):
                     break
@@ -54,8 +75,19 @@ extension FactViewController: UISearchBarDelegate {
                     print(error)
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.style = UIActivityIndicatorView.Style.medium
+            loadingIndicator.startAnimating();
+
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.tableView.reloadData()
+                self.dismiss(animated: false, completion: nil)
             }
         }
         searchBar.resignFirstResponder()
@@ -71,8 +103,11 @@ extension FactViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: DisplayFactTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "DisplayFactTableViewCell", for: indexPath) as? DisplayFactTableViewCell
         
         if model.factsArray.isEmpty {
+            cell?.backgroundColor = .clear
             return UITableViewCell()
+            
         } else {
+            
             cell?.setup(value: self.model.factsArray[indexPath.row])
             
             cell?.buttonAction = { sender in
@@ -101,4 +136,5 @@ extension FactViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
         }
     }
+    
 }

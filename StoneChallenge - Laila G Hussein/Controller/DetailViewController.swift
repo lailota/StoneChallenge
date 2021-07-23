@@ -22,6 +22,11 @@ class DetailViewController: UIViewController {
         self.factTextView.frameView()
         
         gifImage.loadGif(name: "chuck")
+        
+        if FactDescription!.count <= 200 {
+            factTextView.font = factTextView.font?.withSize(30)
+        }
+        
     }
     
 
