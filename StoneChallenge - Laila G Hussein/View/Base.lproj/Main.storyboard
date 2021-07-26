@@ -22,8 +22,14 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8d-cf-V8K">
+                                <rect key="frame" x="20" y="144" width="374" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type something ..." translatesAutoresizingMaskIntoConstraints="NO" id="NsM-eT-aOE">
-                                <rect key="frame" x="0.0" y="97" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -31,22 +37,26 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-e4-XCz">
-                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NsM-eT-aOE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="0C3-Yq-rE6"/>
+                            <constraint firstItem="NsM-eT-aOE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0C3-Yq-rE6"/>
                             <constraint firstItem="vqW-Qr-QCf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0f7-aE-ZpP"/>
-                            <constraint firstItem="Qor-e4-XCz" firstAttribute="top" secondItem="NsM-eT-aOE" secondAttribute="bottom" id="7hT-m6-JOU"/>
+                            <constraint firstItem="Qor-e4-XCz" firstAttribute="top" secondItem="NsM-eT-aOE" secondAttribute="bottom" constant="15" id="7hT-m6-JOU"/>
+                            <constraint firstItem="k8d-cf-V8K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jd5-pI-oUc"/>
                             <constraint firstItem="NsM-eT-aOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8X-YB-nmY"/>
                             <constraint firstItem="vqW-Qr-QCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NzL-JT-RVr"/>
                             <constraint firstItem="Qor-e4-XCz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bv9-fh-zoj"/>
+                            <constraint firstItem="Qor-e4-XCz" firstAttribute="top" secondItem="k8d-cf-V8K" secondAttribute="bottom" id="cAy-Be-aTb"/>
+                            <constraint firstItem="k8d-cf-V8K" firstAttribute="top" secondItem="NsM-eT-aOE" secondAttribute="bottom" id="jLe-jL-UkM"/>
                             <constraint firstItem="NsM-eT-aOE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lcJ-3l-SSl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qor-e4-XCz" secondAttribute="bottom" id="pUg-Iq-oKu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qor-e4-XCz" secondAttribute="trailing" id="xkT-7Q-4Eu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8d-cf-V8K" secondAttribute="trailing" constant="20" id="zOj-x2-xBk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CHUCK NORRIS FACTS" id="wl6-It-KjW">
@@ -64,6 +74,7 @@
                         <outlet property="mySearchBar" destination="NsM-eT-aOE" id="gF7-ME-kzp"/>
                         <outlet property="noResultsLabel" destination="vqW-Qr-QCf" id="OSf-84-6uc"/>
                         <outlet property="tableView" destination="Qor-e4-XCz" id="sc0-gl-39h"/>
+                        <outlet property="totalResultsLabel" destination="k8d-cf-V8K" id="gFK-69-w6F"/>
                         <segue destination="OK0-Ox-Hhx" kind="show" identifier="DetailViewController" id="z8a-MQ-lWE"/>
                     </connections>
                 </viewController>
