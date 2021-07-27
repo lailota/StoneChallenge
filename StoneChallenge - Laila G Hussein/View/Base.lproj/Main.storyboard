@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CHUCK NORRIS FACTS-->
+        <!--FactViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FactViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FactViewController" title="FactViewController" id="BYZ-38-t0r" customClass="FactViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,7 @@
                     <connections>
                         <outlet property="mySearchBar" destination="NsM-eT-aOE" id="gF7-ME-kzp"/>
                         <outlet property="noResultsLabel" destination="vqW-Qr-QCf" id="OSf-84-6uc"/>
+                        <outlet property="searchButton" destination="CK4-BL-f1R" id="RsO-t4-0V9"/>
                         <outlet property="tableView" destination="Qor-e4-XCz" id="sc0-gl-39h"/>
                         <outlet property="totalResultsLabel" destination="k8d-cf-V8K" id="gFK-69-w6F"/>
                         <segue destination="OK0-Ox-Hhx" kind="show" identifier="DetailViewController" id="z8a-MQ-lWE"/>
@@ -82,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="415.94202898550731" y="58.928571428571423"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--DetailViewController-->
         <scene sceneID="c8o-bG-zBm">
             <objects>
-                <viewController id="OK0-Ox-Hhx" customClass="DetailViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="DetailViewController" id="OK0-Ox-Hhx" customClass="DetailViewController" customModule="StoneChallenge___Laila_G_Hussein" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbH-Pd-ipM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +129,7 @@
                     <connections>
                         <outlet property="factTextView" destination="lzr-ld-Bb4" id="BYE-Jr-w3t"/>
                         <outlet property="gifImage" destination="mrw-Zi-MZd" id="R1n-n5-nau"/>
+                        <outlet property="shareButton" destination="Zhz-OB-pfw" id="pti-h7-gJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXY-AH-GVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

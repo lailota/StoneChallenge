@@ -13,6 +13,7 @@ class FactViewController: UIViewController {
     @IBOutlet weak var mySearchBar: UISearchBar!
     @IBOutlet weak var noResultsLabel: UILabel!
     @IBOutlet weak var totalResultsLabel: UILabel!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     
     var model: FactsManager = {
         return FactsManager.factsManager
@@ -44,6 +45,7 @@ class FactViewController: UIViewController {
     
 }
 
+// MARK: - UISearchBarDelegate
 
 extension FactViewController: UISearchBarDelegate {
     
@@ -94,6 +96,7 @@ extension FactViewController: UISearchBarDelegate {
     
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension FactViewController: UITableViewDelegate, UITableViewDataSource {
     

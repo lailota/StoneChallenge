@@ -11,6 +11,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var factTextView: UITextView!
     @IBOutlet weak var gifImage: UIImageView!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     var urlString: String?
     var FactDescription: String?
@@ -23,7 +24,7 @@ class DetailViewController: UIViewController {
         
         gifImage.loadGif(name: "chuck")
         
-        if FactDescription!.count <= 200 {
+        if FactDescription?.count ?? 0 <= 200 {
             factTextView.font = factTextView.font?.withSize(30)
         }
         
